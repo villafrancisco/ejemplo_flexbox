@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejemplo de Flexbox</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Propiedades para Flexbox</h1>
+		</header>
+		<div class="container-fluid">
+			<div class="row">
+				<aside class="aside col-sm-12 com-md-12 col-lg-6 col-xl-6">
+					<h3>Propiedades Flexbox</h3>
+					<form action="#" id="form_items">
+						<div class="form-group row">
+							<label for="items" class="col-sm-3 col-form-label">Elige número elementos:</label>
+							<div class="col-sm-9">
+								<select name="items" id="items" class="custom-select">
+									<option selected value="">Elige una opcion</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 com-md-12 col-lg-4 col-xl-4">
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-label col-sm-3 col-md-3 col-lg-3 col-xl-3 my-auto">display:</legend>
+										<div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="display" id="inline-flex" value="inline-flex" />
+												<label class="form-check-label" for="inline-flex">inline-flex</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="display" id="flex" value="flex" />
+												<label class="form-check-label" for="flex">flex</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<div class="col-sm-12 com-md-12 col-lg-5 col-xl-5">
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-label col-sm-3 col-md-3 col-lg-3 col-xl-3 my-auto">flex-direction:</legend>
+										<div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex-direction" id="row" value="row" />
+												<label class="form-check-label" for="row">row</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex-direction" id="row-reverse" value="row-reverse" />
+												<label class="form-check-label" for="row-reverse">row-reverse</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex-direction" id="column" value="column" />
+												<label class="form-check-label" for="column">column</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex-direction" id="column-reverse" value="column-reverse" />
+												<label class="form-check-label" for="column-reverse">column-reverse</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 com-md-12 col-lg-4 col-xl-4">
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-label col-sm-3 col-md-3 col-lg-3 col-xl-3 my-auto">flex-wrap:</legend>
+										<div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex-wrap" id="nowrap" value="nowrap" />
+												<label class="form-check-label" for="nowrap">no-wrap</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex-wrap" id="wrap" value="wrap" />
+												<label class="form-check-label" for="wrap">wrap</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex-wrap" id="wrap-reverse" value="wrap-reverse" />
+												<label class="form-check-label" for="wrap-reverse">wrap-reverse</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<div class="col-sm-12 com-md-12 col-lg-5 col-xl-5">
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-label col-sm-3 col-md-3 col-lg-3 col-xl-3 my-auto">justify-content:</legend>
+										<div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="justify-content" id="flex-start" value="flex-start" />
+												<label class="form-check-label" for="flex-start">flex-start</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="justify-content" id="center" value="center" />
+												<label class="form-check-label" for="center">center</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="justify-content" id="space-between" value="space-between" />
+												<label class="form-check-label" for="space-between">space-between</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="justify-content" id="space-around" value="space-around" />
+												<label class="form-check-label" for="space-around">space-around</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="justify-content" id="space-evenly" value="space-evenly" />
+												<label class="form-check-label" for="space-evenly">space-evenly</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="justify-content" id="flex-end" value="flex-end" />
+												<label class="form-check-label" for="flex-end">flex-end</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12 com-md-12 col-lg-4 col-xl-4">
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-label col-sm-3 col-md-3 col-lg-3 col-xl-3 my-auto">align-items:</legend>
+										<div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="align-items" id="align-items-flex-start" value="flex-start" />
+												<label class="form-check-label" for="align-items-flex-start">flex-start</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="align-items" id="align-items-center" value="center" />
+												<label class="form-check-label" for="align-items-center">center</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="align-items" id="align-items-flex-end" value="flex-end" />
+												<label class="form-check-label" for="align-items-flex-end">flex-end</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="align-items" id="align-items-stretch" value="stretch" />
+												<label class="form-check-label" for="align-items-stretch">stretch</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							<div class="col-sm-12 com-md-12 col-lg-5 col-xl-5">
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-label col-sm-3 col-md-3 col-lg-3 col-xl-3 my-auto">align-content:</legend>
+										<div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="align-content" id="align-content-flex-start" value="flex-start" />
+												<label class="form-check-label" for="align-content-flex-start">flex-start</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="align-content" id="align-content-center" value="center" />
+												<label class="form-check-label" for="align-content-center">center</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="align-content" id="align-content-flex-end" value="flex-end" />
+												<label class="form-check-label" for="align-content-flex-end">flex-end</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="align-content" id="align-content-stretch" value="stretch" />
+												<label class="form-check-label" for="align-content-stretch">stretch</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+						<div class="row flex_hidden" id="flex_elements">
+							<div class="col-sm-12 com-md-12 col-lg-4 col-xl-4">
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-label col-sm-3 col-md-3 col-lg-3 col-xl-3 my-auto">flex:</legend>
+										<div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex" id="flex-1" value="0 1 auto" />
+												<label class="form-check-label" for="flex-1" data-toggle="modal" data-target="#choose_items">0 1 auto</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex" id="flex-2" value="1 1 auto" />
+												<label class="form-check-label" for="flex-2" data-toggle="modal" data-target="#choose_items">1 1 auto</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flex" id="flex-3" value="1 0 auto" />
+												<label class="form-check-label" for="flex-3" data-toggle="modal" data-target="#choose_items">1 0 auto</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 com-md-12 col-lg-12 col-xl-12">
+								<button type="button" class="btn btn-primary btn-lg btn-block" id="generar_codigo">Generar Código</button>
+							</div>
+						</div>
+					</form>
+				</aside>
+
+				<main class="col-sm-12 com-md-12 col-lg-6 col-xl-6">
+					<div class="main-container" id="main_container">
+						<div class="item display_none">1</div>
+						<div class="item display_none">2</div>
+						<div class="item display_none">3</div>
+						<div class="item display_none">4</div>
+						<div class="item display_none">5</div>
+						<div class="item display_none">6</div>
+						<div class="item display_none">7</div>
+						<div class="item display_none">8</div>
+						<div class="item display_none">9</div>
+						<div class="item display_none">10</div>
+					</div>
+				</main>
+			</div>
+			<!-- Fin del row -->
+		</div>
+		<!-- Fin del main-container-->
+
+		<!-- Modal -->
+		<div class="modal fade" id="choose_items" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Elige los elementos para flex</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						<select class="selectpicker" multiple title="Elige los elementos" data-style="btn-primary" id="flex_elements_select">
+							<!-- <option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option> -->
+						</select>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn btn-primary" id="elegir_elementos">Elegir elementos</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="codigo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Codigo</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="codigo">
+							<div class="codigo_item">
+								<h6>Código HTML</h6>
+
+								<ol class="codigo_html"></ol>
+							</div>
+							<div class="codigo_item">
+								<h6>Codigo Css</h6>
+								<ol class="codigo_css"></ol>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn btn-primary">Copiar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<small>Fr@ncisc@ Vill@</small>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
